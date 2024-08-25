@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Birthday Wish | Shriyu</title>
+  <title></title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/images/favicon.ico" >
+  <link rel="icon" href="assets/images/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
 </head>
 
@@ -94,8 +94,10 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
+
   <script type="module">
+    import { voiceNotePath } from './script.js';
     import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
     var img = document.querySelector("#img");
     const wavesurfer = WaveSurfer.create({
@@ -108,7 +110,7 @@
       width: 180,
       height: 64,
       responsive: true,
-      url: "assets/music/my_audio.mp3",
+      url: voiceNotePath,
     })
 
     img.addEventListener("click", () => {
@@ -126,6 +128,8 @@
       wavesurfer.stop();
     })
   </script>
+
+
 </body>
 
 </html>

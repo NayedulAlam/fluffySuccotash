@@ -1,28 +1,22 @@
-// Disable mouse wheel scrolling
-window.addEventListener('wheel', function (e) {
-  e.preventDefault();
-}, { passive: false });
+//recipient variables
+var messageText = "Happy Birthday yrr!<br>I hope this year has gone well and if not don't worry is saal firse try karna ho jaayega :) yrr is baar jyada likh nhi paaunga kyuki ye raat 3 baje bethkar likh rha hu and puri creativity mene website banane me laga di so wishing you the best of luck and a very happy birthday.";
 
-// Disable touch scrolling
-window.addEventListener('touchmove', function (e) {
-  e.preventDefault();
-}, { passive: false });
+var recipientName = "Shriyu";
 
-// Disable keyboard scrolling (e.g., arrow keys, spacebar)
-window.addEventListener('keydown', function (e) {
-  const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40]; // Spacebar, Page Up/Down, Home/End, Arrow keys
-  if (keys.includes(e.keyCode)) {
-    e.preventDefault();
-  }
-}, false);
+export const voiceNotePath = "assets/music/my_audio.mp3";
+
+var finalDay = 25;
+var finalHour = 9;
+var finalMinute = 10;
+
+
+document.querySelector("title").innerHTML = `Birthday Wish | ${recipientName}`;
 
 var message = document.querySelector("#message");
 var messageFlag = true;
 var flame = 1;
 var cake = document.querySelector("#cake");
 var age = document.querySelector("#age p");
-
-var messageText = "Happy Birthday yrr!<br>I hope this year has gone well and if not don't worry is saal firse try karna ho jaayega :) yrr is baar jyada likh nhi paaunga kyuki ye raat 3 baje bethkar likh rha hu and puri creativity mene website banane me laga di so wishing you the best of luck and a very happy birthday.";
 
 //audio
 var bgmButton = document.querySelector("#bgm-play-buttom");
@@ -38,9 +32,6 @@ bgmButton.addEventListener("click", function () {
   }
 })
 
-var finalDay = 25;
-var finalHour = 9;
-var finalMinute = 5;
 
 var targetDate = new Date();
 targetDate.setDate(finalDay);
@@ -175,19 +166,25 @@ function CandleBlow() {
                       i++;
                     }
                   }
+                  else if (i >= messageText.length) {
+                    clearInterval(textIteration);
+                    setTimeout(() => {
+                      document.querySelector("#text").style.display = "block";
+                      document.querySelector("#bonus").addEventListener("click", () => {
+                        document.querySelector("#text").style.display = "none";
+                        bgmAudio.pause();
+                        bgmButton.src = "assets/images/icons8-mute-64.png";
+                        document.querySelector(".hero").style.display = "flex";
+                      }, { once: true })
+                      document.querySelector(".hero").addEventListener("click", () => {
+                        bgmAudio.pause();
+                        bgmButton.src = "assets/images/icons8-mute-64.png";
+                      })
+                    }, 1000)
+
+                  }
+                  messageFlag = false;
                 }, 100);
-                messageFlag = false;
-                setTimeout(() => {
-                  document.querySelector("#text").style.display = "block";
-                  document.querySelector("#text").addEventListener("click", () => {
-                    document.querySelector("#text").style.display = "none";
-                    document.querySelector(".hero").style.display = "flex";
-                  })
-                  document.querySelector(".hero").addEventListener("click", () => {
-                    bgmAudio.pause();
-                    bgmButton.src = "assets/images/icons8-mute-64.png";
-                  })
-                }, 33000)
               }
             });
             //tooltip appear if user has not opened the card
@@ -215,5 +212,22 @@ function CandleBlow() {
 }
 cake.addEventListener("click", CandleBlow)
 
+// Disable mouse wheel scrolling
+window.addEventListener('wheel', function (e) {
+  e.preventDefault();
+}, { passive: false });
+
+// Disable touch scrolling
+window.addEventListener('touchmove', function (e) {
+  e.preventDefault();
+}, { passive: false });
+
+// Disable keyboard scrolling (e.g., arrow keys, spacebar)
+window.addEventListener('keydown', function (e) {
+  const keys = [32, 33, 34, 35, 36, 37, 38, 39, 40]; // Spacebar, Page Up/Down, Home/End, Arrow keys
+  if (keys.includes(e.keyCode)) {
+    e.preventDefault();
+  }
+}, false);
 
 
