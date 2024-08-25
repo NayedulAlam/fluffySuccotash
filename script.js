@@ -39,8 +39,8 @@ bgmButton.addEventListener("click", function () {
 })
 
 var finalDay = 25;
-var finalHour = 8;
-var finalMinute = 9;
+var finalHour = 9;
+var finalMinute = 5;
 
 var targetDate = new Date();
 targetDate.setDate(finalDay);
