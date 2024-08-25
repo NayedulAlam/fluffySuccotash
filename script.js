@@ -39,8 +39,8 @@ bgmButton.addEventListener("click", function () {
 })
 
 var finalDay = 25;
-var finalHour = 9;
-var finalMinute = 0;
+var finalHour = 8;
+var finalMinute = 9;
 
 var targetDate = new Date();
 targetDate.setDate(finalDay);
@@ -187,7 +187,7 @@ function CandleBlow() {
                     bgmAudio.pause();
                     bgmButton.src = "assets/images/icons8-mute-64.png";
                   })
-                }, 1000)
+                }, 33000)
               }
             });
             //tooltip appear if user has not opened the card
