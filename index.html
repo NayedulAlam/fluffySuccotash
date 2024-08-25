@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <div id="countdownOverlay">
+    <p id="NA"></p>
+    <p id="timer" class="hidden"></p>
+    <div class="upper hidden">
+      <p>Happy</p>
+    </div>
+    <div class="lower hidden">
+      <p>Birthday</p>
+    </div>
+  </div>
+  <div id="bgm" class="hidden"><img id="bgm-play-buttom" src="assets/images/icons8-mute-64.png" alt=""> <audio
+      src="assets/music/wait bgm.mp3" hidden autoplay loop></audio></div>
+  <div id="main" class="hidden">
+    <div id="section1">
+      <div id="navBar">
+        <img class="text" src="assets/images/bd text.png" alt="">
+        <img class="flag" src="assets/images/flags.png" alt="">
+      </div>
+      <div id="content">
+        <div id="age">
+          <p>18</p>
+        </div>
+        <div id="cake">
+          <div id="tap">
+            <p>Tap</p><img src="assets/images/icons8-tap-24.png" alt="">
+          </div>
+          <div class="plate"></div>
+          <div class="layer layer-bottom"></div>
+          <div class="layer layer-middle"></div>
+          <div class="layer layer-top"></div>
+          <div class="icing"></div>
+          <div class="drip drip1"></div>
+          <div class="drip drip2"></div>
+          <div class="drip drip3"></div>
+          <div class="candle">
+            <div class="flame"></div>
+            <div class="flame-thread"></div>
+          </div>
+        </div>
+      </div>
+      <a id="scroll-down" title="Next Page" href="#section2">
+        <div class="scroll-tooltip">
+          <p>Next Page</p>
+          <div class="scroll-tooltip-arrow"></div>
+        </div>
+        <div class="arrow"></div>
+      </a>
+    </div>
+
+    <div id="section2">
+      <div class="card">
+        <div class="cover">
+          <div class="front">
+            <p id="heading">SPECIAL NOTE</p>
+            <p id="subHeading">for a special person</p>
+          </div>
+          <div class="back"></div>
+        </div>
+        <p id="message"></p>
+        <div class="tooltip">
+          <div class="tooltip-arrow"></div>
+          <p>Click to open</p>
+        </div>
+      </div>
+
+      <div id="bonus">
+        <div id="text">
+          <p>Voice Note</p>
+        </div>
+        <div class="hero">
+          <img src="assets/images/icons8-play-64.png" id="img" alt="">
+          <div id="waveform">
+          </div>
+        </div>
+      </div>
+
+      <a id="scroll-up" title="Prev Page" href="#section1">
+        <div class="arrow"></div>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="module">
+    import WaveSurfer from 'https://cdn.jsdelivr.net/npm/wavesurfer.js@7/dist/wavesurfer.esm.js'
+    var img = document.querySelector("#img");
+    const wavesurfer = WaveSurfer.create({
+      container: '#waveform',
+      waveColor: '#E3CAA5',
+      progressColor: '#FFFBE9',
+      barGap: 3,
+      barWidth: 2,
+      barRadius: 4,
+      width: 180,
+      height: 64,
+      responsive: true,
+      url: "assets/music/my_audio.mp3",
+    })
+
+    img.addEventListener("click", () => {
+      wavesurfer.playPause();
+      if (img.src.includes("play")) {
+        img.src = "assets/images/icons8-pause-64.png";
+      }
+      else {
+        img.src = "assets/images/icons8-play-64.png";
+      }
+    })
+
+    wavesurfer.on("finish", () => {
+      img.src = "assets/images/icons8-play-64.png";
+      wavesurfer.stop();
+    })
+  </script>
+</body>
+
+</html>
