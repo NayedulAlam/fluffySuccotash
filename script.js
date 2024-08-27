@@ -5,6 +5,9 @@ var messageText = "Happy Birthday!<br>Lorem ipsum dolor sit amet consectetur adi
 
 var recipientName = "Name";
 
+//previous age of the recipient
+var oldAge=18;
+
 export const voiceNotePath = "assets/music/audio_message.mp3";
 
 var finalDay = 26;
@@ -14,11 +17,14 @@ var finalMinute = 0;
 
 document.querySelector("title").innerHTML = `Birthday Wish | ${recipientName}`;
 
+
 var message = document.querySelector("#message");
 var messageFlag = true;
 var flame = 1;
 var cake = document.querySelector("#cake");
 var age = document.querySelector("#age p");
+
+age.innerHTML=oldAge;
 
 //audio
 var bgmButton = document.querySelector("#bgm-play-buttom");
@@ -98,7 +104,7 @@ function CandleBlow() {
 
   if (flame <= 0) {
     age.style.transform = " scale(1.3)";
-    age.innerHTML = "19";
+    age.innerHTML = oldAge+1;
     cake.removeEventListener("click", CandleBlow)
     bgmAudio.src = "assets/music/popper.mp3";
     bgmAudio.loop = false;
