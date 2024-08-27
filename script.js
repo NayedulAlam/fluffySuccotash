@@ -1,7 +1,7 @@
 //recipient variables
 
-//keep message below 50 words, else message will overflow the card
-var messageText = "Happy Birthday!<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, in pariatur. Voluptatum ipsam, ipsa quas, vitae dolorum ab beatae quae in quod quibusdam earum commodi totam ea neque. Eveniet sed et nostrum magni unde laudantium nulla aliquam quaerat accusantium facilis. Officia dolor possimus deserunt voluptatibus minus ipsam similique consequuntur vel.";
+//keep message below 46 words, else message will overflow the card
+var messageText = "Happy Birthday!<br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, in pariatur. Voluptatum ipsam, ipsa quas, vitae dolorum ab beatae quae in quod quibusdam earum commodi totam ea neque. Eveniet sed et nostrum magni unde laudantium nulla aliquam quaerat accusantium facilis. Officia dolor possimus deserunt voluptatibus.";
 
 var recipientName = "Name";
 
