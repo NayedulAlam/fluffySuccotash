@@ -1,13 +1,13 @@
 //recipient variables
-var messageText = "Happy Birthday yrr!<br>I hope this year has gone well and if not don't worry is saal firse try karna ho jaayega :) yrr is baar jyada likh nhi paaunga kyuki ye raat 3 baje bethkar likh rha hu and puri creativity mene website banane me laga di so wishing you the best of luck and a very happy birthday.";
+var messageText = "Happy Birthday!<br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum non nobis earum dolore rem porro, architecto vero expedita accusamus eum, ducimus eos pariatur reprehenderit. Similique asperiores delectus, doloribus deleniti quis non nam assumenda! Quas reiciendis facilis incidunt. Dignissimos eius perspiciatis cumque exercitationem consequuntur, corrupti repudiandae modi laudantium aut iste obcaecati velit ad dolore, nihil atque laboriosam eos eum dolor veritatis pariatur iusto! Vel ab, ea quo repellat at eos tempora ullam enim laudantium animi, soluta similique deleniti. Mollitia sint earum non placeat culpa repellat! Corporis voluptatum reprehenderit consequuntur vero a neque illum quos? Quaerat recusandae suscipit maxime rem ipsum atque vero sequi? Praesentium voluptatibus provident veniam porro quibusdam minus blanditiis nam quidem rem soluta, minima iusto impedit reiciendis atque dolorem exercitationem, rerum molestias illum harum distinctio. Optio recusandae, odio veniam voluptatem labore tempore blanditiis explicabo harum aperiam? Id tempore voluptas nostrum repudiandae aperiam quia praesentium eaque sapiente officia officiis nesciunt possimus hic sed cupiditate perferendis, reiciendis molestias doloremque nobis molestiae reprehenderit porro voluptates quidem. Asperiores culpa earum laudantium? Beatae ab vero incidunt? Laboriosam commodi reprehenderit repudiandae nemo similique ea quis voluptatem ad aut, labore beatae natus iure quam iusto molestias obcaecati voluptate dolores atque distinctio in enim? Fuga maiores labore natus rerum possimus adipisci. Eligendi voluptatem distinctio iusto quis nobis, reiciendis repudiandae aliquam dolores totam exercitationem libero est quaerat expedita mollitia quas amet vel nam dolorum et cum debitis tenetur? Quaerat explicabo architecto facilis, quisquam nostrum quidem, quia veritatis illo et dolorem unde quod, commodi doloribus magnam. Odio, incidunt maxime.";
 
-var recipientName = "Shriyu";
+var recipientName = "Name";
 
-export const voiceNotePath = "assets/music/my_audio.mp3";
+export const voiceNotePath = "assets/music/audio_message.mp3";
 
-var finalDay = 25;
-var finalHour = 9;
-var finalMinute = 10;
+var finalDay = 26;
+var finalHour = 0;
+var finalMinute = 0;
 
 
 document.querySelector("title").innerHTML = `Birthday Wish | ${recipientName}`;
