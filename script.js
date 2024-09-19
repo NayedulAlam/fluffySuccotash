@@ -13,7 +13,7 @@ export const voiceNotePath = "assets/music/audio_message.mp3";
 var finalDay = 0; //set Day of the month
 var finalHour = 0; //set hour
 var finalMinute = 0; //set minute
-var finalSec= 30; //set seconds
+
 
 
 document.querySelector("title").innerHTML = `Birthday Wish | ${recipientName}`;
@@ -46,7 +46,7 @@ var targetDate = new Date();
 targetDate.setDate(finalDay);
 targetDate.setHours(finalHour);
 targetDate.setMinutes(finalMinute);
-targetDate.setSeconds(finalSec);
+targetDate.setSeconds(30);
 
 var countdown = setInterval(function () {
 
