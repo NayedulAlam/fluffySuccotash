@@ -10,9 +10,9 @@ var oldAge=18;
 
 export const voiceNotePath = "assets/music/audio_message.mp3";
 
-var finalDay = 26;
-var finalHour = 0;
-var finalMinute = 0;
+var finalDay = 0; //set Day of the month
+var finalHour = 0; //set hour
+var finalMinute = .5; //set minute
 
 
 document.querySelector("title").innerHTML = `Birthday Wish | ${recipientName}`;
