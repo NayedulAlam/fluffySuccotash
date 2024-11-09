@@ -65,7 +65,7 @@ body {
   }
 
   #countdownOverlay #NA:before {
-    content: "Sorry, but this site is not available for your device yet.";
+    content: "Sorry, this site is not available for your device yet.";
   }
 }
 
